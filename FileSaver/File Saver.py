@@ -27,7 +27,7 @@ def myClick():
         windowError.maxsize(200, 60)
 
     else:
-        f = open("FlegMartin/TextFiles/" + inputValuefilename + ".txt", "a")
+        f = open(inputValuefilename + ".txt", "a")
         f.write(inputValue)
         Tfilename.delete(1.0, "end")
         T.delete(1.0, "end")
@@ -41,10 +41,10 @@ def returnblock(event):
 # add widgets here
 
 lfilename = Label(window, fg='Green', font='TimesNewRoman', border=0, text="File Name:")
-lfilename.place(x=132, y=1)
-ltext = Label(window, fg='Green', font='TimesNewRoman', border=0, text="Content(Text):")
+lfilename.place(x=805, y=1)
+ltext = Label(window, fg='Green', font='TimesNewRoman', border=0, text="Content(Text):", height=1, width=60)
 btn = Button(window, text="Save File", fg='Red', command=myClick)
-btn.place(x=260, y=760)
+btn.place(x=920, y=900)
 window.title('File Saver')
 Tfilename = Text(window, bg="white", fg='Red', height=1.2, width=20, font='TimesNewRoman', border=1)
 Tfilename.pack()
@@ -57,7 +57,7 @@ T.pack()
 lfilename.bind('<Return>', returnblock)
 window.configure(bg='Black')
 window.title('File Saver by Martin')
-window.geometry("600x800")
-window.minsize(600, 800)
-window.maxsize(600, 800)
+window.geometry("1920x1080")
+window.minsize(1920, 1080)
+window.maxsize(1920, 1080)
 window.mainloop()
